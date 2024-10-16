@@ -62,10 +62,10 @@ exports.login = async (req, res, next) => {
         }
 
         // Check if the password is correct
-        const isValidPassword = await bcrypt.compare(password, user.password);
+        const isPasswordValid = await bcrypt.compare(password, user.password);
 
-        if (!isValidPassword) {
-            return next(new createError('Invalid password!', 401));
+        if (!isPasswordValid) {
+            return next(new createError('Invalid email or password!', 401));
         }
 
         // Assign JWT (JSON Web Token) to the user
@@ -84,7 +84,6 @@ exports.login = async (req, res, next) => {
                 password: user.password,
                 role: user.role,
             },
-
         })
     }catch(error) {
         next(error);

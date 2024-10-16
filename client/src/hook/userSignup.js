@@ -15,7 +15,7 @@ function userSignup() {
 
         try {
             setError(null);
-            setLoading(true);
+            setLoading(false);
             const res = await fetch('http://localhost:3000/api/auth/signup', {
                 method: 'POST',
                 headers: {
@@ -32,12 +32,10 @@ function userSignup() {
             } else if (res.status === 400) {
                 setError(data.message);
             } else {
-                message.error('Registration Failed')
+                message.error('Registration Failed');
             }
         }catch (error) {
-            // message.error("Registration Failed abc");
-            // message.error("Registration Failed");
-            console.log(error);
+            message.error('Registration Failed');
         } 
         finally {
             setLoading(false);

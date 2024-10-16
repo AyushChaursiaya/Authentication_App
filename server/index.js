@@ -15,7 +15,6 @@ app.use('/api/auth', authRouter);
 
 
 // // 3) MOONGO DB CONNECTION
-
 const Mongo_Url = "mongodb+srv://ayush:12345@cluster0.oo018hf.mongodb.net/Authentication_App";
 
 mongoose.connect(Mongo_Url)

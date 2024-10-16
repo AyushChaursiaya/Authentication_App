@@ -2,7 +2,7 @@ import { Alert, Button, Card, Flex, Form, Input, Spin, Typography } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import registerImage from '../assets/register.jpeg';
-import userSignup from '../../hook/userSignup';
+import userSignup from '../hook/userSignup';
 
 const Register = () => {
 
@@ -96,11 +96,11 @@ const Register = () => {
                         </Form.Item>
 
                         <Form.Item>
-                            <Button size="large" className='btn'>
-                                <Link to='/login'>
-                                        Sign In
-                                </Link>
-                            </Button>
+                            <Link to='/login'>
+                                <Button size="large" className='btn'>
+                                    Sign In
+                                </Button>
+                            </Link>
                         </Form.Item>
 
                     </Form>

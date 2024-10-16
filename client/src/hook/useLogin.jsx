@@ -7,7 +7,7 @@ function useLogin() {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(null);
 
-    const useLogin = async (values) => {
+    const loginUser = async (values) => {
 
         try {
             setError(null);
@@ -37,7 +37,7 @@ function useLogin() {
         }
     }
 
-    return ({ loading, error, useLogin });
+    return { loading, error, loginUser };
 }
 
 export default useLogin;

@@ -32,6 +32,10 @@ body {
   border-radius: 8px;
 }
 
+.alert {
+  margin-bottom: 1.5rem;
+}
+
 .signIn-Image {
  width: 100%;
  mix-blend-mode: multiply;
@@ -39,7 +43,10 @@ body {
 
 /* profile-card */
 .profile-card {
-  width: 500px;
+  width: 400px;
+  display: grid;
+  justify-content: center;
+  border: 1px solid rgba(17, 28, 95, 0.61);
 }
 
 .avatar {
