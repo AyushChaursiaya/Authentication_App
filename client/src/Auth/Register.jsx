@@ -114,5 +114,5 @@ const Register = () => {
         </Card>
     )
 }
-
+  
 export default Register;

@@ -29,7 +29,7 @@ function useLogin() {
                 setError(data.message);
             } else {
                 message.error('Registration Failed');
-            }
+            } 
         } catch (error) {
             message.error("Registration Failed");
         } finally {
