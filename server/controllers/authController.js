@@ -26,7 +26,7 @@ exports.signup = async (req, res, next) => {
         // Assign JWT (JSON Web Token) to the user
         const token = jwt.sign({ id: newUser._id }, 'secretkey123', {
             expiresIn: '90d',
-        });
+        });   
 
         // Send response
         res.status(201).json({
